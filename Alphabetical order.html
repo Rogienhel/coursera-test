@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+	<title>Alphabetical Order</title>
+</head>
+
+<script type="text/javascript" >
+	function alphabetical(str)
+	{
+		var arr = str.split("");
+		res = arr.sort().join("");
+		rws = res.replace(/\s+/g, "");
+		return rws;
+	};
+	
+	function Answer()
+	{ 
+		let str = document.getElementById("String").value;
+		let ans = alphabetical(str);
+		document.getElementById("Answer").innerHTML = ans;
+	};
+</script>
+<style>
+	html{
+		background-color: #eeeeee;
+		text-align: center;
+	}
+</style>
+<body>
+<h1><center>String input to alphabetical order</center></h1>
+	
+<fieldset>
+	<label for="Name">&emsp;The string to order alphabetically:</label>
+	<input type="text" id="String" name="String"><br><br>
+	<label for="Answer1">The alphabetical order value is:</label>
+	<p id = "Answer"></p><br><br>
+	<input type = "button"
+	value = "Check"
+	onClick = "javascript:Answer()">
+</fieldset>
+
+</body>

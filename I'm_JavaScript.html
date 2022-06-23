@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<title>I'm JavaScript</title>
+<style>
+	h2{
+		padding: 100px;
+		background-color: black;
+		color: white;
+		text-align: center;
+	}
+	h1{
+		padding: 100px;
+		background-color: white;
+		color: white;
+		text-align: center;
+	}
+	.right{
+		position: absolute;
+		right: 40%;
+	}
+	.left{
+		position: absolute;
+		left: 40%;
+	}
+</style>
+<script>
+	function ImJS(){
+		document.getElementById("hello").style.backgroundColor = "white";
+		document.getElementById("hello").style.color = "white";
+		document.getElementById("imjs").style.backgroundColor = "white";
+		document.getElementById("imjs").style.color = "black";
+		}
+	function revImJS(){
+		document.getElementById("hello").style.backgroundColor = "black";
+		document.getElementById("hello").style.color = "white";
+		document.getElementById("imjs").style.backgroundColor = "white";
+		document.getElementById("imjs").style.color = "white";
+		}
+</script>
+	</head>
+	
+<body>
+	<h2 id = "hello">HELLO!</h2>
+	<button class = "left" type = "button" onclick = "ImJS()">REVEAL</button>
+	<button class = "right" type = "button" onclick = "revImJS()">BACK</button>
+	<h1 id = "imjs">I'm JavaScript!</h1>
+	
+</body>
+</html>

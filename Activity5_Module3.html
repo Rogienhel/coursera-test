@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<head>
+	<title>ACTIVITY 5</title>
+</head>
+<body>
+<h1><center>Learning Activity 5 (Module 3)</center></h1>
+
+<script type="text/javascript" >
+    function first(){
+        var x = parseInt(document.getElementById("x_1").value);
+	var fsubtotal = document.getElementById("fsubtotal");
+        fsubtotal.value = x * 5;
+    }
+    function second(){
+        var x = parseInt(document.getElementById("x_2").value);
+	var ssubtotal = document.getElementById("ssubtotal");
+        ssubtotal.value = x * 10;
+    }
+    function third(){
+        var x = parseInt(document.getElementById("x_3").value);
+	var tsubtotal = document.getElementById("tsubtotal");
+        tsubtotal.value = x * 15;
+    }
+    function fourth(){
+        var x = parseInt(document.getElementById("x_4").value);
+	var fosubtotal = document.getElementById("fosubtotal");
+        fosubtotal.value = x * 20;
+    }
+    function fifth(){
+        var x = parseInt(document.getElementById("x_5").value);
+	var fisubtotal = document.getElementById("fisubtotal");
+        fisubtotal.value = x * 30;
+    }
+    function total(){
+	var subtotal1 = parseInt(document.getElementById("fsubtotal").value);
+	var subtotal2 = parseInt(document.getElementById("ssubtotal").value);
+	var subtotal3 = parseInt(document.getElementById("tsubtotal").value);
+	var subtotal4 = parseInt(document.getElementById("fosubtotal").value);
+	var subtotal5 = parseInt(document.getElementById("fisubtotal").value);
+	var total = document.getElementById("Total");
+	total.value = subtotal1 + subtotal2 + subtotal3 + subtotal4 + subtotal5;
+	}
+</script>    
+<style>
+fieldset {
+  background-color: #eeeeee;
+}
+html {
+ font-family: Serif;
+}
+table, td, th {
+ border: 2px inset #D3D3D3;
+ letter-spacing: 1px;
+ font-size: 1.2 rem;
+ padding: 3px;
+}
+input[type=text]{ border: 2px inset #D3D3D3;}
+input[type=button],{
+  background-color: #808080;}
+</style>
+
+ <fieldset>
+ <label for="Name">&emsp;Name:</label>
+ <input type="text" id="Name" name="Name" value="Walaa Brody"><br><br>
+ <label for="Email">&emsp;Email:</label>
+ <input type="text" id="Email" name="Email" value="w_brody@widget-sales.com"><br><br>
+ <label for="Address">&nbsp;Address:</label>
+ <textarea style="border: 3px inset #D3D3D3" name="Address" rows="3" cols="20">
+162 Main Road Rondebosch 
+Cape Town
+</textarea>
+<br><br>
+ <label for="PC">Postcode:</label>
+ <input type="text" id="PC" name="PC" value="7700"><br><br>
+
+<table>
+  <tr>
+	<th>Product</th>
+  	<th>Part Number</th>
+  	<th>Quantity</th>
+  	<th>Unit Price</th>
+  	<th>Subtotal</th>
+  </tr>
+  <tr>
+  	<td>EconoBox</td>
+  	<td>LB100</td>
+	<td><input type="text" id="x_1" value="3"></td>
+	<td>P5</td>
+	<td>P<input type = "text" id = "fsubtotal" READONLY></td>
+	<td><input type = "button"
+	value = "Calculate"
+	onClick = "javascript:first()">
+	</td>
+  </tr>
+  <tr>
+  	<td>Standard Box</td>
+  	<td>LB200</td>
+	<td><input type="text" id="x_2" value="4"></td>
+	<td>P10</td>
+	<td>P<input type = "text" id = "ssubtotal" READONLY></td>
+	<td><input type = "button"
+	value = "Calculate"
+	onClick = "javascript:second()">
+	</td>
+  </tr>
+  <tr>
+  	<td>Premium Box</td>
+  	<td>LB300</td>
+	<td><input type="text" id="x_3" value="1"></td>
+	<td>P15</td>
+	<td>P<input type = "text" id = "tsubtotal" READONLY></td>
+	<td><input type = "button"
+	value = "Calculate"
+	onClick = "javascript:third()">
+	</td>
+  </tr>
+  <tr>
+  	<td>Deluxe Box</td>
+  	<td>LB400</td>
+	<td><input type="text" id="x_4" value="0"></td>
+	<td>P20</td>
+	<td>P<input type = "text" id = "fosubtotal" READONLY></td>
+	<td><input type = "button"
+	value = "Calculate"
+	onClick = "javascript:fourth()">
+	</td>
+  </tr>
+  <tr>
+  	<td>Super Box</td>
+  	<td>LB500</td>
+	<td><input type="text" id="x_5" value="1"></td>
+	<td>P30</td>
+	<td>P<input type = "text" id = "fisubtotal" READONLY></td>
+	<td><input type = "button"
+	value = "Calculate"
+	onClick = "javascript:fifth()">
+	</td>
+  </tr>
+  <tr>
+	<td colspan="4" style="text-align: right">Total:</td>
+	<td>P<input type = "text" id = "Total" READONLY></td>
+	<td><input type = "button"
+	value = "Calculate"
+	onClick = "javascript:total()">
+	</td>
+</tr>
+
+</table>
+	
+<br>
+
+<p><b>Credit Card Details</b></p>
+  <p>Card Type:</p>
+  <input type="radio" id="MC" name="Card Type" value="Mastercard" checked>
+  <label for="MC">Mastercard</label>&emsp;&emsp;&emsp;
+  <label for="CardNum">Card Number:&nbsp;</label>
+  <input type="text" id="CardNum" name="Card Number" value="45645"><br><br>
+  <input type="radio" id="Visa" name="Card Type" value="Visa">
+  <label for="Visa">Visa</label>&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;
+  <label for="Exdate">Expiry date:&emsp;</label>
+  <input type="text" id="Exdate" name="Expiry Date" value="03/99"><br><br>
+  <input type="radio" id="AExpress" name="Card Type" value="American Express">
+  <label for="AExpress">American Express</label><br><br>
+  <input type="radio" id="DClub" name="Card Type" value="Diners Club">
+  <label for="DClub">Diners Club</label><br>
+
+<br>
+<label for="DAddress">&nbsp;<b>Delivery Address:</b></label>
+<textarea style="border: 3px inset #D3D3D3" name="Address" rows="3" cols="20">
+162 Main Road Rondebosch 
+Cape Town
+</textarea>
+
+<br><br><br>
+<input type="button" value="Send order">
+<input type="button" value="Clear form">
+ </fieldset>
+</body>
+</html>
